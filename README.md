@@ -112,3 +112,50 @@ La complejidad temporal de un algoritmo recursivo se determina analizando cuánt
 
 
 ## Caminos en una PCB:
+
+
+
+### Contexto del Problema
+
+El problema que se busca resolver en este proyecto consiste en calcular cuántos caminos posibles existen entre dos puntos en una grilla de tamaño \( N \times M \), la cual representa una tarjeta de circuito impreso (PCB). Los únicos movimientos permitidos en la grilla son hacia la derecha o hacia abajo. El objetivo es contar las rutas posibles desde la esquina superior izquierda (punto A) hasta la esquina inferior derecha (punto B).
+
+Existen varias maneras de resolver este problema. En este proyecto, se comparan dos enfoques diferentes: uno que utiliza recursión simple y otro que usa programación dinámica. El propósito es medir la eficiencia de cada enfoque conforme el tamaño de la grilla aumenta.
+
+### Estructura del Proyecto
+
+Este repositorio está organizado en varios módulos para dividir el código en partes más manejables y fáciles de entender. La clase `CaminosPCB`, que se encuentra en el archivo `caminos_pcb.py`, contiene dos soluciones: una implementada usando recursión y otra usando programación dinámica. Ambas soluciones están decoradas con un decorador que mide el tiempo de ejecución de las funciones.
+
+El decorador utilizado se encuentra en el archivo `decoradores.py`. Este decorador mide el tiempo que toma ejecutar cada una de las funciones cuando se calculan los caminos en la grilla. El propósito de medir el tiempo es poder comparar el rendimiento de ambas soluciones cuando se prueban diferentes tamaños de grilla.
+
+El archivo `generar_grafico.py` contiene una función llamada `generar_grafico`, la cual se encarga de ejecutar las dos soluciones para una lista de tamaños de grilla, medir sus tiempos de ejecución y generar un gráfico comparativo. El gráfico se guarda en un archivo de formato SVG, lo que permite visualizarlo con alta calidad en cualquier navegador o visor compatible con este formato.
+
+Finalmente, el archivo `main.py` es el archivo principal del proyecto. Este archivo define las funciones que llaman a las soluciones en la clase `CaminosPCB` y luego pasa esas funciones a la función `generar_grafico`. También es aquí donde se especifican los tamaños de grilla que se van a probar. Al ejecutar este archivo, se generará un gráfico comparando los tiempos de ejecución de ambas soluciones.
+
+El gráfico comparativo generado se guarda en un archivo llamado `tiempos_de_ejecucion_recursivo_vs_PD.svg`. Este archivo contiene el gráfico que muestra el tiempo que tomó cada solución (recursiva y dinámica) para distintos tamaños de grilla. 
+
+### Cómo funciona la implementación modular
+
+El código está dividido en módulos para hacerlo más fácil de manejar y mantener. Cada módulo tiene una función específica, lo que facilita hacer cambios en una parte del código sin afectar el resto. El decorador en `decoradores.py` es responsable de medir el tiempo de ejecución de las funciones. Las soluciones al problema de los caminos están en `caminos_pcb.py`. La función que genera los gráficos está en `generar_grafico.py`, y el archivo `main.py` es el punto de entrada del programa, que orquesta todo.
+
+Al ejecutar el archivo principal `main.py`, el programa crea un objeto de la clase `CaminosPCB` y luego llama a las dos soluciones (recursiva y dinámica). El decorador mide el tiempo que tarda cada solución en ejecutarse, y estos tiempos se usan para generar un gráfico que compara ambas soluciones. La función `generar_grafico` se asegura de guardar el gráfico en formato SVG para que sea fácil visualizar los resultados.
+
+El código modular permite añadir nuevas soluciones sin tener que modificar gran parte del proyecto. Si decides agregar una nueva solución al problema de los caminos, puedes hacerlo fácilmente definiendo una nueva función en `caminos_pcb.py` y luego añadiéndola a la lista de funciones en `main.py` para que se incluya en la comparación.
+
+### Cómo obtener los resultados
+
+Para ejecutar este proyecto en tu máquina local, primero asegúrate de tener instalado Python y la librería `matplotlib`, que es necesaria para generar los gráficos. Puedes instalar `matplotlib` con el siguiente comando:
+
+```bash
+pip install matplotlib
+```
+Una vez que tengas todo listo, clona este repositorio en tu computadora. Puedes hacerlo con el siguiente comando:
+
+```bash
+git clone <URL-del-repositorio>
+```
+Después de clonar el repositorio, navega al directorio del proyecto. Desde allí, puedes ejecutar el archivo main.py para generar el gráfico comparativo.
+
+El programa calculará el tiempo de ejecución de ambas soluciones (recursiva y dinámica) para distintos tamaños de grilla. Luego, generará un gráfico que se guardará en el archivo `tiempos_de_ejecucion_recursivo_vs_PD.svg.`
+
+Para visualizar el gráfico, abre el archivo `tiempos_de_ejecucion_recursivo_vs_PD.svg` en un navegador o en un visor compatible con archivos SVG. El gráfico te permitirá ver cuál de las dos soluciones es más eficiente conforme aumenta el tamaño de la grilla, el cuál adelanto será la programación dinámica.
+
