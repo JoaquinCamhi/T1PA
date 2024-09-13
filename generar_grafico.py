@@ -30,5 +30,5 @@ def generar_grafico():
     plt.title('Comparativa de tiempos de ejecución')
     plt.legend()
     plt.grid(True)
-    plt.savefig("tiempos_de_ejecución_erecursivo_vs_PD", format='svg') #guardamos en svg
+    plt.savefig("tiempos_de_ejecución_erecursivo_vs_PD.svg", format='svg') #guardamos en svg
     plt.show()
