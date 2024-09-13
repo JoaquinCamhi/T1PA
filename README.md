@@ -142,16 +142,8 @@ Al ejecutar el archivo principal `main.py`, el programa crea un objeto de la cla
 
 ### Cómo obtener los resultados
 
-Para ejecutar este proyecto en tu máquina local, primero asegúrate de tener instalado Python y la librería `matplotlib`, que es necesaria para generar los gráficos. Puedes instalar `matplotlib` con el siguiente comando:
+Para ejecutar este proyecto en tu máquina local, primero asegúrate de tener instalado Python y la librería `matplotlib`, que es necesaria para generar los gráficos. 
 
-```bash
-pip install matplotlib
-```
-Una vez que tengas todo listo, clona este repositorio en tu computadora. Puedes hacerlo con el siguiente comando:
-
-```bash
-git clone <https://github.com/JoaquinCamhi/T1PA>
-```
 Después de clonar el repositorio, navega al directorio del proyecto. Desde allí, puedes ejecutar el archivo main.py para generar el gráfico comparativo.
 
 El programa calculará el tiempo de ejecución de ambas soluciones (recursiva y dinámica) para distintos tamaños de grilla. Luego, generará un gráfico que se guardará en el archivo `tiempos_de_ejecucion_recursivo_vs_PD.svg.`
