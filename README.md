@@ -151,7 +151,7 @@ pip install matplotlib
 Una vez que tengas todo listo, clona este repositorio en tu computadora. Puedes hacerlo con el siguiente comando:
 
 ```bash
-git clone <URL-del-repositorio>
+git clone <https://github.com/JoaquinCamhi/T1PA>
 ```
 Después de clonar el repositorio, navega al directorio del proyecto. Desde allí, puedes ejecutar el archivo main.py para generar el gráfico comparativo.
 
